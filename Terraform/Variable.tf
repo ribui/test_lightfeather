@@ -11,13 +11,13 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "backend_image" {
-   description = "The URI for the Backend Image in the ECR"
-   #default     = ""
- }
-variable "frontend_image" {
-   description = "The URI for the Backend Image in the ECR"
-   #default     = ""
- }
+# variable "backend_image" {
+#    description = "The URI for the Backend Image in the ECR"
+#    #default     = ""
+#  }
+# variable "frontend_image" {
+#    description = "The URI for the Backend Image in the ECR"
+#    #default     = ""
+#  }
 
 
