@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME_B = "Backend-App" 
-    IMAGE_NAME_F = "Frontend-App"
+    IMAGE_NAME_B = "backend_app" 
+    IMAGE_NAME_F = "frontend_app"
     IMAGE_TAG    = "latest"
   }
   
