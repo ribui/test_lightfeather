@@ -47,13 +47,13 @@ pipeline {
         sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 160503865246.dkr.ecr.us-east-1.amazonaws.com'
          
         sh 'echo "Tagging and pushing the my-docker-image to ECR"'
-        sh 'docker tag $IMAGE_NAME_B:$IMAGE_TAG 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:latest'
-        sh 'docker push 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:$IMAGE_TAG'
+        sh 'docker tag $IMAGE_NAME_B:$IMAGE_TAG 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test/$IMAGE_NAME_B:$IMAGE_TAG'
+        sh 'docker push 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test/$IMAGE_NAME_B:$IMAGE_TAG'
         sh 'echo "Succefully Tagged and pushed my-docker-image to ECR"'
         
         sh 'echo "Tagging and pushing the my-backend-image to ECR"'
-        sh 'docker tag $IMAGE_NAME_F:$IMAGE_TAG 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:latest'  
-        sh 'docker push 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:latest'
+        sh 'docker tag $IMAGE_NAME_F:$IMAGE_TAG 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test/$IMAGE_NAME_F:$IMAGE_TAG'  
+        sh 'docker push 160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test/$IMAGE_NAME_F:$IMAGE_TAG'
         sh 'echo "Tagging and pushing the my-docker-image to ECR"'
          
         sh 'echo "TAGGING AND PUSHING IMAGES TO ECR SUCCESS....."'
