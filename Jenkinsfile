@@ -13,9 +13,9 @@ pipeline {
           sh 'export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID'
           sh 'export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY'
           sh 'echo "Successfully authenticated with AWS"'
-          sh './Terraform/terraform init'
-          sh './Terraform/terraform plan -out=tfplan'
-          sh './Terraform/terraform apply --auto-approve tfplan'
+          sh 'cd Terraform && terraform init'
+          sh 'cd Terraform && terraform plan -out=tfplan'
+          sh 'cd Terraform && terraform apply --auto-approve tfplan'
         }
       }
     }
