@@ -58,6 +58,12 @@ A few examples of extras for this coding challenge:
 
 This is not an exhaustive list of extra features that could be added to this code challenge. At the end of the day, this section is for you to demonstrate any skills you want to show that’s not captured in the core requirement.
 
+
+
+![architecture diagram](https://github.com/ribui/test_lightfeather/assets/107009141/56951a8a-e085-421d-8060-c7ab2033e139)
+
+
+
 1.	Manually created a Jenkins server and integrated it with Docker and git. Opened the right ports to allow communication PORT NUMBERS: 8080, SSH port. Added ec2-user and Jenkins user into the docker group.
 2.	Locally configured Jenkins with necessary plugins: 
 Install Jenkins and required plugins:
