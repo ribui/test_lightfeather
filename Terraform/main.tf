@@ -117,7 +117,7 @@ resource "aws_ecs_task_definition" "backend_task" {
   container_definitions = <<EOT
 [
     {
-        "name": "example_app_container",
+        "name": "frontend_app_container",
         "image": "160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:latest",
         "memory": 512,
         "essential": true,
@@ -127,7 +127,19 @@ resource "aws_ecs_task_definition" "backend_task" {
                 "hostPort": 3000
             }
         ]
-    }
+    },
+  {
+        "name": "backend_app_container",
+        "image": "160503865246.dkr.ecr.us-east-1.amazonaws.com/docker-test:latest",
+        "memory": 512,
+        "essential": true,
+        "portMappings": [
+            {
+                "containerPort": 8080,
+                "hostPort": 8080
+            }
+        ]
+    }  
 ]
 EOT
 }
