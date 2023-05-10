@@ -15,7 +15,7 @@ pipeline {
           sh 'echo "Successfully authenticated with AWS"'
           sh 'cd Terraform && terraform init'
           sh 'cd Terraform && terraform plan -out=tfplan'
-          sh 'cd Terraform && terraform apply --auto-approve tfplan'
+          sh 'cd Terraform && terraform destroy --auto-approve '
         }
       }
     }
