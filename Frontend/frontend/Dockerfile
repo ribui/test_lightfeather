@@ -1,3 +1,4 @@
+# FRONTEND APP
 # Specify the base image
 FROM node:16
 
@@ -7,7 +8,7 @@ WORKDIR /app
 # Copy the package.json and package-lock.json files to the container
 COPY ["package.json", "package-lock.json", "./"]
 
-RUN nmp install --production
+RUN npm install --production
 
 # Install the app's dependencies
 RUN npx browserslist@latest --update-db
